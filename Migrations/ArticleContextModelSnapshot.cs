@@ -37,6 +37,9 @@ namespace ArticleWebSite.Migrations
                     b.Property<DateTime>("CreationDate")
                         .HasColumnType("datetime2");
 
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
                     b.Property<string>("PictureAlt")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");

@@ -1,16 +1,17 @@
 ﻿@page "{id:int}"
 @model ArticleWebSite.Pages.ArticleDetailModel
 @{
+    ViewData["Title"] = "جزئیات مقاله";
 }
 
 <div class="col-12 mb-3">
-    <h1></h1>
+    <h1>@Model.Article.Title</h1>
 </div>
 <div class="col-12 mb-3">
-    <img  class="img-fluid">
+    <img src="@Model.Article.picture" alt="@Model.Article.PictureAlt" title="@Model.Article.PictureTitle" class="img-fluid">
 </div>
 <div class="col-12">
     <p class="article-content">
-        
+        @Model.Article.Body
     </p>
 </div>

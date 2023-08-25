@@ -18,7 +18,9 @@
 
         public DateTime CreationDate { get; private set; }
 
-        public Article(string title, string picture, string pictureAlt, string pictureTitle, string shortDescription, string body)
+        public bool IsDeleted { get; set; } = false;
+
+        public Article(string title, string picture, string pictureAlt, string pictureTitle, string shortDescription, string body,bool isDeleted)
         {
             Title = title;
             this.picture = picture;
@@ -27,6 +29,7 @@
             ShortDescription = shortDescription;
             Body = body;
             CreationDate=DateTime.Now;
+            IsDeleted = isDeleted;
         }
     }
 }
